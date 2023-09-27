@@ -24,4 +24,26 @@
 }
 .fade-in-from-top {
   animation: fade-in-from-top 2.5s;
+}
+
+/***** Rotation des fleurs *****/
+/*******************************/
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.site-footer::after,
+.site-footer ul::after,
+.site-footer::before,
+.story__article::after,
+#studio h2::before,
+#studio h2::after,
+.story h2::after,
+#nomination::after,
+#nomination::before {
+  animation: rotate 10s linear infinite;
 }/*# sourceMappingURL=styles.css.map */
