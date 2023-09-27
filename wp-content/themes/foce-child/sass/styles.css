@@ -62,6 +62,43 @@
   transform: translateY(0);
 }
 
+/****** HERO HEADER ******/
+/******* PARALLAX ********/
+@keyframes floatAnimation {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(5px, -10px);
+  }
+  50% {
+    transform: translate(10px, 0);
+  }
+  75% {
+    transform: translate(-10px, 10px);
+  }
+}
+.banner {
+  position: relative;
+  overflow: hidden;
+}
+.banner img {
+  z-index: 1;
+  position: absolute;
+  width: 680px;
+  height: 480px;
+  animation: floatAnimation 2.5s infinite linear;
+}
+
+.hero-video {
+  position: absolute;
+  max-height: 806px;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /***** Section nomination *****/
 /*****************************/
 #nomination {
