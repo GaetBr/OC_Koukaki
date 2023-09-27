@@ -46,3 +46,20 @@ window.addEventListener("scroll", handleScroll);
   
 // Déclenche la vérification de visibilité au chargement de la page
 window.addEventListener("load", handleScroll);
+
+/***** PARALLAX *****/
+/********************/
+
+// Sélectionne l'élément de la vidéo et l'image de parallaxe
+const heroVideo = document.querySelector('.hero-video');
+const parallaxTitle = document.querySelector('.parallax-title');
+  
+// Écoute l'événement de défilement de la page
+window.addEventListener('scroll', () => {
+    // Calcule la valeur de défilement de la page
+    const scrollValue = window.scrollY;
+  
+    // Applique une transformation CSS pour créer l'effet de parallaxe
+    heroVideo.style.transform = `translateY(${scrollValue * 0.3}px)`; 
+    parallaxTitle.style.transform = `translateY(-${scrollValue * 0.2}px)`; 
+});
