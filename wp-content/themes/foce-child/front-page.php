@@ -5,7 +5,11 @@ get_header();
 
     <main id="primary" class="site-main">
         <section class="banner fade-in-from-top">
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
+            <!-- Vidéo en arrière-plan avec image de secours -->
+            <video class="hero-video" autoplay loop muted playsinline>
+                <source src="<?php echo get_stylesheet_directory_uri() . '/assets/studio_koukaki-video_header.mp4'; ?>" type="video/mp4">
+            </video>
+            <img class="parallax-title" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
         </section>
         <section id="#story" class="story fade-in">
             <h2><span class="animate-section-title">L'histoire</span></h2>
