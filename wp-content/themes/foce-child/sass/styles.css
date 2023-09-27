@@ -46,4 +46,18 @@
 #nomination::after,
 #nomination::before {
   animation: rotate 10s linear infinite;
+}
+
+/***** Effet d'apparition des titres *****/
+/*****************************************/
+.animate-section-title {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 2.5s ease;
+  display: block;
+}
+
+.section-title-visible {
+  opacity: 1;
+  transform: translateY(0);
 }/*# sourceMappingURL=styles.css.map */
