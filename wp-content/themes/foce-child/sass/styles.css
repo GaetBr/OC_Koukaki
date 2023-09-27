@@ -60,4 +60,60 @@
 .section-title-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/***** Section nomination *****/
+/*****************************/
+#nomination {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  margin-left: 165px;
+  z-index: 1;
+}
+#nomination::before {
+  content: url("../assets/images/Sunflower.png");
+  position: absolute;
+  left: -5em;
+  top: -3em;
+}
+#nomination::after {
+  content: url("../assets/images/orchid.png");
+  position: absolute;
+  right: -4em;
+  bottom: 18em;
+}
+
+.nomination-title {
+  width: 700px;
+  height: 250px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+  letter-spacing: -0.02em;
+  color: #FFF5E9;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-size: 100% 100%;
+  background-image: url("../assets/images/orange-title.png");
+  background-position: center;
+  padding-top: 45px;
+  padding-left: 60px;
+}
+
+.nomination-image {
+  width: 260px;
+  height: 129px;
+  padding-left: 40px;
+  padding-bottom: 30px;
+  margin-right: 70px;
+}
+
+/*********** FOOTER ***********/
+/*****************************/
+.site-footer::before {
+  display: none;
+}
+.site-footer::after {
+  display: none;
 }/*# sourceMappingURL=styles.css.map */
