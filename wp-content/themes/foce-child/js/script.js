@@ -51,15 +51,39 @@ window.addEventListener("load", handleScroll);
 /********************/
 
 // Sélectionne l'élément de la vidéo et l'image de parallaxe
-const heroVideo = document.querySelector('.hero-video');
 const parallaxTitle = document.querySelector('.parallax-title');
-  
+
 // Écoute l'événement de défilement de la page
 window.addEventListener('scroll', () => {
     // Calcule la valeur de défilement de la page
     const scrollValue = window.scrollY;
-  
+
+    // Limite la translation maximale vers le bas à 250px
+    const maxTranslateY = 250;
+
     // Applique une transformation CSS pour créer l'effet de parallaxe
-    heroVideo.style.transform = `translateY(${scrollValue * 0.3}px)`; 
-    parallaxTitle.style.transform = `translateY(-${scrollValue * 0.2}px)`; 
+    if (scrollValue <= maxTranslateY) {
+        // Si la translation vers le bas est inférieure à 250px, déplace vers le bas
+        parallaxTitle.style.transform = `translateY(${scrollValue}px)`;
+    } else {
+        // Si la translation atteint 250px, ajuste la transformation pour remonter progressivement
+        parallaxTitle.style.transform = `translateY(${maxTranslateY - (scrollValue - maxTranslateY)}px)`;
+    }
+});
+
+/***** SWIPER JS *****/
+/*********************/
+
+var swiper = new Swiper(".mySwiper", {
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: "auto",
+  coverflowEffect: {
+    rotate: 0,
+    stretch: -100,
+    depth: 100,
+    modifier: 1,
+    slideShadows: false,
+  },
 });
