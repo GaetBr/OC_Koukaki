@@ -106,22 +106,45 @@
 
 /***** Characters carousel *****/
 /*******************************/
-.swiper {
-  width: 100%;
+.swiper-container {
+  width: 1266px;
   padding-top: 50px;
   padding-bottom: 50px;
+  margin-left: 150px;
+  overflow: hidden;
 }
 
 .swiper-slide {
-  background-position: center;
   background-size: cover;
   width: 300px;
   height: 300px;
 }
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
+.story #characters h3 {
+  background-position: left;
+  text-align: left;
+  margin-left: 100px;
+  padding-left: 45px;
+}
+.story #characters div {
+  flex: none;
+}
+
+/***** Section Le Lieu *****/
+/***************************/
+.story #place {
+  background-image: url("../assets/images/Studio_Koukaki-image_place.png");
+}
+.story #place > div {
+  max-width: 580px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 6em;
+}
+.story #place > div p {
+  padding-left: 5em;
 }
 
 /***** Section nomination *****/
