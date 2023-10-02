@@ -78,13 +78,18 @@
     transform: translate(-10px, 10px);
   }
 }
+.parallax-title {
+  z-index: 1;
+  position: absolute;
+  width: 680px;
+  height: 480px;
+}
+
 .banner {
   position: relative;
   overflow: hidden;
 }
 .banner img {
-  z-index: 1;
-  position: absolute;
   width: 680px;
   height: 480px;
   animation: floatAnimation 2.5s infinite linear;
@@ -97,6 +102,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/***** Characters carousel *****/
+/*******************************/
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
 }
 
 /***** Section nomination *****/
