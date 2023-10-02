@@ -74,16 +74,23 @@ window.addEventListener('scroll', () => {
 /***** SWIPER JS *****/
 /*********************/
 
-var swiper = new Swiper(".mySwiper", {
-  effect: "coverflow",
-  grabCursor: true,
-  centeredSlides: true,
-  slidesPerView: "auto",
-  coverflowEffect: {
-    rotate: 0,
-    stretch: -100,
-    depth: 100,
-    modifier: 1,
-    slideShadows: false,
+var swiper = new Swiper('.swiper-container', {
+  loop: true,
+  speed: 1000,
+  autoplay: {
+      delay: 3000,
   },
-});
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: false,
+  slidesPerView: 3,
+  slidesPerGroup: 1,
+  spaceBetween: 10,
+  coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 0,
+      modifier: 1,
+      slideShadows: false,
+  },
+}) 
