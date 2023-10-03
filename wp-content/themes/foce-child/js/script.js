@@ -47,8 +47,8 @@ window.addEventListener("scroll", handleScroll);
 // Déclenche la vérification de visibilité au chargement de la page
 window.addEventListener("load", handleScroll);
 
-/***** PARALLAX *****/
-/********************/
+/***** PARALLAX TITRE *****/
+/**************************/
 
 // Sélectionne l'élément de la vidéo et l'image de parallaxe
 const parallaxTitle = document.querySelector('.parallax-title');
@@ -94,3 +94,31 @@ var swiper = new Swiper('.swiper-container', {
       slideShadows: false,
   },
 }) 
+
+/***** PARALLAX NUAGE *****/
+/**************************/
+var parallaxImages = document.querySelectorAll(".parallax-nuage");
+
+  window.addEventListener("scroll", function () {
+    // Vérifie si les deux images sont visibles à l'écran
+    if (isElementInViewport(parallaxImages[0]) && isElementInViewport(parallaxImages[1])) {
+      var scrollPosition = window.scrollY;
+      var displacement = -scrollPosition / 5;
+
+      // Parcours toutes les images avec la classe parallax-nuage
+      parallaxImages.forEach(function (image) {
+        image.style.transform = "translateX(" + displacement + "px)";
+      });
+    }
+  });
+
+  // Fonction pour vérifier si un élément est dans la fenêtre visible
+  function isElementInViewport(el) {
+    var rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
