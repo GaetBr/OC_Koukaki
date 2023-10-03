@@ -135,16 +135,26 @@
 .story #place {
   background-image: url("../assets/images/Studio_Koukaki-image_place.png");
 }
-.story #place > div {
-  max-width: 580px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  margin-left: 6em;
+.story #place .little-cloud {
+  position: absolute;
+  width: 142px;
+  height: 55px;
+  filter: blur(5px);
+  left: 50%;
+  top: 79%;
+  z-index: 1;
 }
-.story #place > div p {
-  padding-left: 5em;
+.story #place .big-cloud {
+  position: absolute;
+  width: 316px;
+  height: 122px;
+  filter: blur(5px);
+  left: 75%;
+  top: 70%;
+  z-index: 1;
+}
+.story #place h3 {
+  z-index: 2;
 }
 
 /***** Section nomination *****/
