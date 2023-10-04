@@ -18,6 +18,7 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
+
 </head>
 
 <body <?php body_class(); ?>>
@@ -26,19 +27,37 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'foce' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<nav id="site-navigation" class="main-navigation">
-            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </button>
-            <ul>
-                <li><a href="#story">Histoire</a></li>
-                <li><a href="#characters">Personnages</a></li>
-                <li class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></li>
-                <li><a href="#place">Lieu</a></li>
-                <li><a href="#studio">Studio Koukaki</a></li>
-            </ul>
+        <nav id="site-navigation" class="main-navigation">
+            <div class="navigation-center">
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="site-title"><?php bloginfo( 'name' ); ?></a>
+            </div>
+            <div class="navigation-right">
+		        <a href="#" id="openBtn">       
+                    <span class="burger-icon">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </span>
+                </a>
+            </div>
+        </nav>
+        <div id="mySidenav" class="sidenav">            
+                <ul>
+                    <li><img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/logo1.png'; ?>" alt="logo Koukaki"></li>
+                    <li><a href="#story">Histoire</a></li>
+                    <li><a href="#characters">Personnages</a></li>
+                    <li><a href="#place">Lieu</a></li>
+                    <li><a href="#studio">Studio Koukaki</a></li>
+                    <p> STUDIO KOUKAKI </p>
+                </ul>
+                <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/cat1.png'; ?>" class="cat cat1" alt="Tenshi">
+                <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/cat2.png'; ?>" class="cat cat2" alt="Kawakeno">
+                <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/cat3.png'; ?>" class="cat cat3" alt="Jaakuna">
 
-		</nav><!-- #site-navigation -->
+                <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/Sunflower.png'; ?>" class="flower sunflower" alt="Sunflower">
+                <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/orchid.png'; ?>" class="flower orchid" alt="Orchid">
+                <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/random_flower.png'; ?>" class="flower random_flower" alt="Random Flower">
+                <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/flower.png'; ?>" class="flower flowers" alt="Flower">
+                <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/hibiscus_footer.png'; ?>" class="flower hibiscus_footer" alt="Hibiscus Footer">
+        </div>
 	</header><!-- #masthead -->
