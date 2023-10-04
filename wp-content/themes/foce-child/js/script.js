@@ -47,6 +47,29 @@ window.addEventListener("scroll", handleScroll);
 // Déclenche la vérification de visibilité au chargement de la page
 window.addEventListener("load", handleScroll);
 
+/***** MENU BURGER *****/
+/***********************/
+var sidenav = document.getElementById("mySidenav");
+var openBtn = document.getElementById("openBtn");
+var burgerIcon = document.querySelector(".burger-icon");
+
+openBtn.onclick = function() {
+    if (sidenav.classList.contains("active")) {
+        closeNav();
+        burgerIcon.classList.remove("active");
+    } else {
+        openNav();
+        burgerIcon.classList.add("active");
+    }
+};
+
+function openNav() {
+    sidenav.classList.add("active");
+}
+
+function closeNav() {
+    sidenav.classList.remove("active");
+}
 /***** PARALLAX TITRE *****/
 /**************************/
 
