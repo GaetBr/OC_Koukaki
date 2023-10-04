@@ -1,3 +1,7 @@
+main {
+  overflow: hidden;
+}
+
 /***** FADE IN SECTION ****/
 /**************************/
 @keyframes fade-in {
@@ -48,6 +52,16 @@
   animation: rotate 10s linear infinite;
 }
 
+#studio h2::after {
+  width: 109px;
+  height: 109px;
+}
+
+.story h2::after {
+  width: 154px;
+  height: 154px;
+}
+
 /***** Effet d'apparition des titres *****/
 /*****************************************/
 .animate-section-title {
@@ -60,6 +74,149 @@
 .section-title-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/***** MENU BURGER *****/
+/***********************/
+.site-header .main-navigation {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.site-header .navigation-center {
+  flex-grow: 1;
+  text-align: center;
+  margin-right: -7em;
+}
+.site-header .navigation-right {
+  display: flex;
+  align-items: center;
+  margin-right: 5em;
+}
+.site-header .burger-icon span {
+  display: block;
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+  transition: transform 0.3s;
+}
+.site-header .burger-icon.active span:nth-child(1) {
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+.site-header .burger-icon.active span:nth-child(2) {
+  opacity: 0;
+}
+.site-header .burger-icon.active span:nth-child(3) {
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/* Sidenav menu */
+.sidenav {
+  height: 0;
+  width: 100%;
+  max-width: 1440px;
+  position: fixed;
+  z-index: 1;
+  top: 60px;
+  background-color: #FFF5E9;
+  overflow: hidden;
+  transition: height 0.5s ease;
+}
+.sidenav a {
+  text-decoration: none;
+  font-size: 4em;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav a:hover {
+  text-shadow: 0 0 15px orangered;
+}
+.sidenav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.sidenav ul p {
+  margin-top: 175px;
+}
+.sidenav img {
+  margin-top: 50px;
+  width: 155px;
+  height: 95px;
+}
+.sidenav.active {
+  height: calc(100% - 60px);
+}
+.sidenav .close {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+.sidenav .cat {
+  width: 150px;
+  height: auto;
+  animation: floatAnimation 2.5s infinite linear;
+}
+.sidenav .cat1 {
+  position: absolute;
+  bottom: 7em;
+  left: 5em;
+}
+.sidenav .cat2 {
+  position: absolute;
+  top: 3em;
+  left: 20em;
+}
+.sidenav .cat3 {
+  position: absolute;
+  bottom: 23em;
+  right: 15em;
+}
+.sidenav .flower {
+  animation: rotate 10s linear infinite;
+}
+.sidenav .sunflower {
+  position: absolute;
+  width: 216px;
+  height: auto;
+  top: 1em;
+  right: 13em;
+}
+.sidenav .orchid {
+  position: absolute;
+  width: 172px;
+  height: auto;
+  top: 0em;
+  left: -4em;
+}
+.sidenav .random_flower {
+  position: absolute;
+  width: 75px;
+  height: auto;
+  top: 20em;
+  right: -2em;
+}
+.sidenav .flowers {
+  position: absolute;
+  width: 70px;
+  height: auto;
+  bottom: 28em;
+  left: 15em;
+}
+.sidenav .hibiscus_footer {
+  position: absolute;
+  width: 626px;
+  height: auto;
+  bottom: -23em;
+  right: -23em;
 }
 
 /****** HERO HEADER ******/
