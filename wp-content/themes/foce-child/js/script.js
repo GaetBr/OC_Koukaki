@@ -49,37 +49,52 @@ window.addEventListener("load", handleScroll);
 
 /***** MENU BURGER *****/
 /***********************/
-// Fonction pour gérer l'animation des titres
+// Fonction pour gérer l'animation des liens
 function handleLinkAnimation() {
   const linkElements = document.querySelectorAll(".animate-section-link");
 
   linkElements.forEach((linkElement) => {
-    // Ajoute la classe pour indiquer que le titre est visible
-    linkElement.classList.add("section-link-visible");
-
-    // Sélectionne chaque lettre dans le texte
     const letters = linkElement.textContent.split("");
 
-    // Remplace le contenu de l'élément par des <span> pour chaque lettre
     linkElement.innerHTML = letters
       .map((letter) => `<span class="letter">${letter}</span>`)
       .join("");
 
-    // Sélectionne toutes les lettres
     const letterElements = linkElement.querySelectorAll(".letter");
 
-    // Animation avec GSAP pour que les lettres montent depuis le bas jusqu'à leur position initiale
     gsap.fromTo(
       letterElements,
-      { opacity: 0, y: "100" }, // Propriétés de départ
-      { opacity: 1, y: "0", stagger: 0.2, duration: 0.2, ease: "power4.out" } // Propriétés finales avec délai entre les lettres
+      { opacity: 0, y: "100" },
+      { opacity: 1, y: "0", stagger: 0.2, duration: 0.2, ease: "power4.out" }
     );
+
+    linkElement.classList.add("section-link-visible");
   });
 }
 
-// Fonction pour gérer l'ouverture du menu burger et déclencher l'animation des titres
+// Fonction pour gérer l'ouverture du menu burger et déclencher l'animation des liens
 function handleMenuOpen() {
   handleLinkAnimation();
+  
+  // Ajoute un gestionnaire d'événements pour chaque lien du menu
+  document.querySelectorAll("#mySidenav a").forEach((link) => {
+    link.addEventListener("click", function(event) {
+      event.preventDefault(); // Empêche le comportement par défaut du lien
+      closeNav(); // Ferme le menu
+      burgerIcon.classList.remove("active");
+      
+      // Navigue vers la cible du lien avec une animation ou une transition si nécessaire
+      const targetId = this.getAttribute("href").substring(1);
+      const targetElement = document.getElementById(targetId);
+      
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop,
+          behavior: "smooth"
+        });
+      }
+    });
+  });
 }
 
 var sidenav = document.getElementById("mySidenav");
@@ -108,7 +123,6 @@ function closeNav() {
   sidenav.style.opacity = "0";
   sidenav.classList.remove("active");
 }
-
 /***** PARALLAX TITRE *****/
 /**************************/
 
