@@ -13,7 +13,7 @@ get_header();
                 <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
             </div>
         </section>
-        <section id="#story" class="story fade-in">
+        <section id="story" class="story fade-in">
             <h2><span class="animate-section-title">L'histoire</span></h2>
             <article id="" class="story__article">
                 <p><?php echo get_theme_mod('story'); ?></p>
@@ -30,8 +30,6 @@ get_header();
                 <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/big_cloud.png'; ?> " alt="gros nuage" class="parallax-nuage big-cloud">
             </article>
         </section>
-
-
         <section id="studio" class="fade-in">
             <h2><span class="animate-section-title">Studio Koukaki</span></h2>
             <div>
@@ -39,7 +37,6 @@ get_header();
                 <p>Avec une créativité et une capacité d’innovation mondialement reconnues, une expertise éditoriale et commerciale à la pointe de son industrie, le Studio Koukaki se positionne comme un acteur incontournable dans un marché en forte croissance. Koukaki construit chaque année de véritables succès et capitalise sur de puissantes marques historiques. Cette année, il vous présente “Fleurs d’oranger et chats errants”.</p>
             </div>
             </section>
-
             <?php get_template_part('templates/oscar'); ?>
 
     </main><!-- #main -->
