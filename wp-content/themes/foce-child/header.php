@@ -44,10 +44,10 @@
         <div id="mySidenav" class="sidenav">            
                 <ul>
                     <li><img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/logo1.png'; ?>" alt="logo Koukaki"></li>
-                    <li><a href="#story">Histoire</a></li>
-                    <li><a href="#characters">Personnages</a></li>
-                    <li><a href="#place">Lieu</a></li>
-                    <li><a href="#studio">Studio Koukaki</a></li>
+                    <li><a href="#story"><span class="animate-section-link">Histoire</span></a></li>
+                    <li><a href="#characters"><span class="animate-section-link">Personnages</span></a></li>
+                    <li><a href="#place"><span class="animate-section-link">Lieu</span></a></li>
+                    <li><a href="#studio"><span class="animate-section-link">Studio Koukaki</span></a></li>
                     <p> STUDIO KOUKAKI </p>
                 </ul>
                 <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/cat1.png'; ?>" class="cat cat1" alt="Tenshi">
